@@ -100,7 +100,7 @@ export const initializePassport = () => {
     )
   );
 
-  // Serialización y deserialización de usuarios
+  // Serialización y Deserialización de usuarios
   passport.serializeUser((user, done) => {
     done(null, user._id);
   });

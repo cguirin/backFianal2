@@ -22,8 +22,7 @@ router.post(
 
 router.delete("/:cid/product/:pid", passportCall("jwt"), authorization("user"), checkProductAndCart, cartsControllers.deleteProductToCart);
 
-router.put(
-    "/:cid/product/:pid",
+router.put("/:cid/product/:pid",
     passportCall("jwt"),
     authorization("user"),
     checkProductAndCart,

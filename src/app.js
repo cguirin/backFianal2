@@ -21,16 +21,16 @@ connectMongoDB();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.engine("handlebars", handlebars.engine()); // Inicia el motor del la plantilla
-app.set("views", __dirname + "/views"); // Indicamos que ruta se encuentras las vistas
-app.set("view engine", "handlebars"); // Indicamos con que motor vamos a utilizar las vistas
+app.engine("handlebars", handlebars.engine()); 
+app.set("views", __dirname + "/views"); 
+app.set("view engine", "handlebars"); 
 app.use(express.static("public"));
 app.use(cookieParser());
 app.use(
   session({
-    secret: envs.SECRET_CODE, // palabra secreta
-    resave: true, // Mantiene la session activa, si esta en false la session se cierra en un cierto tiempo
-    saveUninitialized: true, // Guarda la session
+    secret: envs.SECRET_CODE, 
+    resave: true, 
+    saveUninitialized: true, 
   })
 );
 app.use(cors());

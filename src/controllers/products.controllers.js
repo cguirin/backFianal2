@@ -14,7 +14,7 @@ const getAllProducts = async (req = request, res = response) => {
             learn: true,
         };
 
-        // Si nos solicitan por categoría
+        
         if (category) {
             const products = await productServices.getAllProducts({ category }, options);
             return res.status(200).json({ status: "success", products });
